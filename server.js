@@ -15,6 +15,12 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
+app.get("/api/config", (req, res) => {
+  res.json({
+      success: true,
+  });
+});
+
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "./public/index.html"));
 });
