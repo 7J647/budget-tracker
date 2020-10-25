@@ -1,7 +1,5 @@
 # budget-tracker
 
-# Workout-Tracker
-
 ![License](https://img.shields.io/badge/license-MIT-green)
 ## Table of Contents
 #### &nbsp;&nbsp;&nbsp;&nbsp;[1)&nbsp;Introduction](#introduction)
