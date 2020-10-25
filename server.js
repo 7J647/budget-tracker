@@ -25,6 +25,12 @@ mongoose.connect
   }
 );
 
+const connection = mongoose.connection;
+
+connection.on("connected", () => {
+    console.log("Mongoose successfully connected.");
+})
+
 
 // routes
 app.use(require("./routes/api.js"));
