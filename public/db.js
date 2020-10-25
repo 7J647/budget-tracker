@@ -40,6 +40,7 @@ function checkDatabase() {
   // get all records from store and set to a variable
   const getAll = store.getAll();
 
+
   getAll.onsuccess = function() {
     if (getAll.result.length > 0) {
       fetch("/api/transaction/bulk", {
@@ -56,7 +57,7 @@ function checkDatabase() {
         res.json({
             error: true,
             data: null,
-            message: "Failed to create workout.",
+            message: "Failed to create transactions.",
         });
     })
       .then(() => {
@@ -74,7 +75,7 @@ function checkDatabase() {
         res.json({
             error: true,
             data: null,
-            message: "Failed to create workout.",
+            message: "Failed to create transactions.",
         });
     });
     }
