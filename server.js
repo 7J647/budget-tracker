@@ -46,6 +46,6 @@ connection.on("connected", () => {
 // routes
 app.use(require("./routes/api.js"));
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`App running on port ${PORT}!`);
 });
