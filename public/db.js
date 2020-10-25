@@ -51,6 +51,14 @@ function checkDatabase() {
         }
       })
       .then(response => response.json())
+      .catch(err => {
+        console.log(err);
+        res.json({
+            error: true,
+            data: null,
+            message: "Failed to create workout.",
+        });
+    })
       .then(() => {
         // if successful, open a transaction on your pending db
         const transaction = db.transaction(["pending"], "readwrite");
@@ -60,7 +68,15 @@ function checkDatabase() {
 
         // clear all items in your store
         store.clear();
-      });
+      })
+      .catch(err => {
+        console.log(err);
+        res.json({
+            error: true,
+            data: null,
+            message: "Failed to create workout.",
+        });
+    });
     }
   };
 }
